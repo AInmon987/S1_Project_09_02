@@ -13,3 +13,17 @@
 
 
 /* Validation Styles */
+/* For every input that is not a radio and that is focused will have the background color changed to a tan. */
+input:not([type='radio']):focus {
+    background-color: rgb(255, 218, 165);
+}
+
+/* For every input that is not a radio and that is focused and that is valid  will have the background color changed to a green and will have a green valid logo at the right side show up. */
+input:not([type='radio']):focus:valid {
+    background: rgb(215, 255, 215) url(sb_valid.png) right/contain no-repeat
+}
+
+/* For every input that is not a radio and that is focused and that is invalid  will have the background color changed to a red and will have a red invalid logo at the right side show up. */
+input:not([type='radio']):focus:invalid {
+    background: rgb(255, 148, 148) url(sb_invalid.png) right/contain no-repeat
+}

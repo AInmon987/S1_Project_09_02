@@ -28,10 +28,11 @@
 <body>
     <header>
         <img src="sb_logo.png" alt="The Spice Bowl" />
+        <!-- Created an form for the username and the password. The inputs are text and password. The placeholders are Username and Password. Also created the button for submit to sign into the account. -->
         <form action=" http://www.example.com/sb/login" id="login" method="POST" />
         <input type="text" name="username" id="userBox" placeholder="Username" />
         <input type="password" name="password" id="pwdBox" placeholder="Password">
-        <input type="submit" value="Enter" />
+        <input type="submit" value="Enter" id="happy" />
         </form>
         <nav> <a id="navicon" href="#"><img src="sb_navicon.png" alt="" /></a>
             <ul>
@@ -46,7 +47,9 @@
 
     <section>
         <h1>Payment Form</h1>
+        <!-- Added the form element. The form has an action and the method is post and the id of the form is payment.   -->
         <form action="http://www.example.com/sb/payment" method="POST" id="payment" />
+        <!-- The fieldset has an id of billing and the fieldset has The legend inside of the form has the context of Billing Information (required). Each Label and input boxes is for the key information that the user needs to fill out to be able to make an payment. The key text for the labels and the inputs are First Name, Last Name, Street Address, Street Address (2), City, State, Phone, Country, ZIP/Postal Code, Under the State Input box there is an datalist and the datalist contains all fifty states. What this does is it creates a list when clicked on and it gives the states initals. -->
         <fieldset id="billing">
             <legend>Billing Information (required)</legend>
 
@@ -119,6 +122,7 @@
             <option value="WI" />
             <option value="WY" />
             </datalist>
+
             <label for="zip">ZIP/Postal Code</label>
             <input type="text" name="zip" id="zipBox" pattern="^\d{5}(-\d{4})?$" />
 
@@ -130,7 +134,7 @@
 
 
         </fieldset>
-
+        <!-- This fieldset has the id of creditCard and the fieldset is for the credit card information. The Labels and the inout boxes are for the different credit cards that can be choosen. Each input has required in it because the user has to pick a credit card and one of the ones that are on the page. The different cards that will be applied to the page are, amxr, discover, master, visa. There are images of the photos of each card and the images will be displayed with a radio button to the left side of the imgae of the cards.  -->
         <fieldset id="creditCard">
             <legend>CreditCard(required)</legend>
 
@@ -151,12 +155,13 @@
                 <input type="radio" name="cCard" id="visa" required />
                 <img src="sb_visa.png" alt=""></label>
             </fieldset>
+            <!-- This label and the input box is for the 16 ditit number that is on each and every credit card. The input has a pattern that makes sure that the cardnumber is following the pattern. The card number is a required field that the users must put the data in. -->
             <label for="cardNumber">Credit Card Number</label>
             <input type="text" name="cardNumber" id="cardBox" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
                 required />
 
             <label for="monthList">Expiration Date</label>
-
+            <!-- The select list os for the month that the card expires. The options range from janurary to December. The values are (01) to (12). -->
             <select name="monthList" id="monthList" required />
             <option value="month">--Month--</option>
             <option value="(01)">January (01)</option>
@@ -172,7 +177,7 @@
             <option value="(11)">November (11)</option>
             <option value="(12)">Decemember (12)</option>
             </select>
-
+            <!-- The select list is for the year that the card expires. The options range from 2017 to 2021. The defualt is year -->
             <select name="cardYear" id="yearList" required />
             <option value="year">--year--</option>
             <option value="2017">2017</option>
@@ -180,14 +185,13 @@
             <option value="2019">2019</option>
             <option value="2020">2020</option>
             <option value="2021">2021</option>
-
             </select>
-
+            <!-- The label and the input box is for the CSC and the input has the type of text the name of csc, the id would be cscBox, the csc is a required field to be filled out by the user, the maxlength that the user can put in woud be 3 digits. The placeholder would be nnn and the csc input has an pattern that the users must follow or the data will not be excepted.  -->
             <label for="cscBox">CSC</label>
             <input type="text" name="csc" id="cscBox" required maxlength="3" placeholder="nnn" pattern="^\d{3}$" />
 
         </fieldset>
-
+        <!-- This code is for the next arrow button. The button is submit so when clicked the information will be sent to the server. The image is the picture of the arrow and it just shows where to click on.  -->
         <button type="submit" />
         <img src="sb_button.png" alt="next" />
         </button>
